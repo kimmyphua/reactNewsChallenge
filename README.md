@@ -1,6 +1,6 @@
 # ReactJS News Challenge
 
-
+## Briefing
 
 ## Instructions
 1. Create a new react app `npx create-react-app newagency`
