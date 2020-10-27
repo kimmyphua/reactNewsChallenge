@@ -31,6 +31,12 @@ I will see you on the other side.<br/>
 ## API links
 1. [News Api Site](http://newsapi.org/)
 
+## Helper
+1. If you encounter one of the errors below, you must be trying to setState in an unmounted component. This is where `componentWillUnmount` come in. You can either use `axios.cancelToken` or set a condition to only set state if component is mounted. I have left links as to what to do in the References.
+
+![](https://user-images.githubusercontent.com/14989804/45530190-7551e680-b7b7-11e8-9da0-09340db83c62.png)
+![](https://i.stack.imgur.com/5idib.jpg)
+
 ## Sample Designs
 ![](https://bootstrap.news/wp-content/uploads/2019/07/bootstrap-4-news-portal-magazine-template-1024x768.jpg)
 ![](https://focusoncode.com/wp-content/uploads/2018/07/avision-free-template.jpg)
