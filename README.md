@@ -33,6 +33,42 @@ I will see you on the other side.<br/>
 
 ## Helper
 1. If you encounter one of the errors below, you must be trying to setState in an unmounted component. This is where `componentWillUnmount` come in. You can either use `axios.cancelToken` or set a condition to only set state if component is mounted. I have left links as to what to do in the References.
+<details>
+  <summary> Memory Leak useEffect </summary>
+  
+    ```javascript
+    
+     let cancelToken: any = axios.CancelToken;
+     let source = cancelToken.source();
+ 
+      useEffect(() => {
+          (async () => {
+            try {
+            const data = await axios.get("https://", {
+                cancelToken: source.token
+            });
+
+          }catch (error) {
+            if (axios.isCancel(error)) {
+              console.log('Request canceled', error.message);
+            } else {
+              // handle error
+              console.log(error);
+            }
+          }
+    })();
+    return () => {
+      //when the component unmounts
+      console.log("component unmounted");
+      // cancel the request (the message parameter is optional)
+      source.cancel('Operation canceled by the user.');
+    }
+    }, []); //End UseEffect
+   
+
+    ```
+
+  </details>
 
 ![](https://user-images.githubusercontent.com/14989804/45530190-7551e680-b7b7-11e8-9da0-09340db83c62.png)
 ![](https://i.stack.imgur.com/5idib.jpg)
