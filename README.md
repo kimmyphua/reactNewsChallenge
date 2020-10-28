@@ -33,11 +33,9 @@ I will see you on the other side.<br/>
 
 ## Helper
 1. If you encounter one of the errors below, you must be trying to setState in an unmounted component. This is where `componentWillUnmount` come in. You can either use `axios.cancelToken` or set a condition to only set state if component is mounted. I have left links as to what to do in the References.
+
 <details>
   <summary> Memory Leak useEffect </summary>
-  
-    ```js
-    
      let cancelToken: any = axios.CancelToken;
      let source = cancelToken.source();
  
@@ -64,9 +62,6 @@ I will see you on the other side.<br/>
       source.cancel('Operation canceled by the user.');
     }
     }, []); //End UseEffect
-   
-
-    ```
 
   </details>
 
@@ -79,3 +74,8 @@ I will see you on the other side.<br/>
 
 ## References
 1. [Axios Cancel Token](https://github.com/axios/axios#cancellation)
+
+## Team
+1. Ebere Iweala
+1. Tristan Calleja 
+1. Siu Sing Lai
