@@ -36,7 +36,7 @@ I will see you on the other side.<br/>
 <details>
   <summary> Memory Leak useEffect </summary>
   
-    ```javascript
+    ```js
     
      let cancelToken: any = axios.CancelToken;
      let source = cancelToken.source();
