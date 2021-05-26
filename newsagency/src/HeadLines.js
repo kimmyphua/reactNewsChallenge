@@ -13,7 +13,7 @@ function HeadLines() {
     useEffect(() => {
         const getArticles = async () => {
             const res = await Axios.get(`https://newsapi.org/v2/top-headlines?country=${term}&apiKey=824218ff88904c148794c8fad42ab04a`)
-            setArticles(res.data.articles)
+            setArticles(res.data.articles.splice(0,8))
             console.log(res)
         }
         getArticles()

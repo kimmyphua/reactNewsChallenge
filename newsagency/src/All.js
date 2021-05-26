@@ -12,17 +12,17 @@ function All() {
     useEffect(() => {
         const getArticles1 = async () => {
             const res1 = await Axios.get(`https://newsapi.org/v2/top-headlines?country=sg&apiKey=824218ff88904c148794c8fad42ab04a`)
-            setArticles1(res1.data.articles)
+            setArticles1(res1.data.articles.splice(0,4))
             console.log(res1)
         }
         const getArticles2 = async () => {
             const res2 = await Axios.get(`https://newsapi.org/v2/top-headlines?country=my&apiKey=824218ff88904c148794c8fad42ab04a`)
-            setArticles2(res2.data.articles)
+            setArticles2(res2.data.articles.splice(0,4))
             console.log(res2)
         }
         const getArticles3 = async () => {
             const res3 = await Axios.get(`https://newsapi.org/v2/top-headlines?country=ng&apiKey=824218ff88904c148794c8fad42ab04a`)
-            setArticles3(res3.data.articles)
+            setArticles3(res3.data.articles.splice(0,4))
             console.log(res3)
         }
         getArticles1()
