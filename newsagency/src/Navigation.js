@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Nav, Navbar, } from "react-bootstrap";
 import {NavLink} from "react-router-dom";
-function Navigation(props) {
+function Navigation() {
     return (
         <Navbar bg="dark" expand="lg" variant="dark">
             <Container>

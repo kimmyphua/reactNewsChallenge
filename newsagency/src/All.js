@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Axios from 'axios';
 import HeadLinesItems from "./HeadLinesItems";
-import Navigation from "./Navigation";
-import {Card, Row, Col, Container, Image, Navbar, Nav, Form, Button} from "react-bootstrap";
-import {NavLink} from "react-router-dom";
+import {Row, Col, Container, Image } from "react-bootstrap";
 
 function All() {
     const [articles1, setArticles1] = useState([])
