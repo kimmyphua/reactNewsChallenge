@@ -2,14 +2,13 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import Axios from 'axios';
 import HeadLinesItems from "./HeadLinesItems";
-import Navigation from "./Navigation";
-import {Card, Row, Col, Container, NavDropdown, Navbar, Nav, Form, Button, Image} from "react-bootstrap";
-import {NavLink} from "react-router-dom";
+import { Container, Image} from "react-bootstrap";
+
 
 function HeadLines() {
     let {term} = useParams();
     const [articles, setArticles] = useState([]);
-    // const [term, setTerm] = useState('us')
+
 
     useEffect(() => {
         const getArticles = async () => {
